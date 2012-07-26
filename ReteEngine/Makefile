@@ -172,13 +172,13 @@ ctrans.o: ctrans.cpp
 GlobalMemPool.o: GlobalMemPool.cpp
 	$(GCC) $(CCFLAGS) $(EXTRA_CCFLAGS) $(INCLUDES) -o $@ -c $<
 
-String.o: String.cpp
+StringUtil.o: StringUtil.cpp
 	$(GCC) $(CCFLAGS) $(EXTRA_CCFLAGS) $(INCLUDES) -o $@ -c $<
 
 Kernel.o: Kernel.cu
 	$(NVCC) $(NVCCFLAGS) $(EXTRA_NVCCFLAGS) $(GENCODE_FLAGS) $(INCLUDES) -o $@ -c $<
 
-libReteEngine.so: RDFAdaptor.o tinystr.o tinyxml.o tinyxmlerror.o tinyxmlparser.o ClauseFilter.o ReteQueue.o ReteTerminal.o NodeAny.o NodeFactory.o TripleContainer.o TriplePattern.o ReteEngine.o ReteRuntime.o Compiler.o Rule.o RuleParser.o RuleReason.o common.o ctrans.o GlobalMemPool.o String.o Kernel.o
+libReteEngine.so: RDFAdaptor.o tinystr.o tinyxml.o tinyxmlerror.o tinyxmlparser.o ClauseFilter.o ReteQueue.o ReteTerminal.o NodeAny.o NodeFactory.o TripleContainer.o TriplePattern.o ReteEngine.o ReteRuntime.o Compiler.o Rule.o RuleParser.o RuleReason.o common.o ctrans.o GlobalMemPool.o StringUtil.o Kernel.o
 	$(GCC) -shared -fPCI $(CCFLAGS) -o $@ $+ $(LDFLAGS) $(EXTRA_LDFLAGS)
 
 clean:
