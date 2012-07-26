@@ -4,7 +4,7 @@
 #include <fstream>
 #include <stdlib.h>
 #include "common.h"
-#include "String.h"
+#include "StringUtil.h"
 
 #include "TriplePattern.h"
 #include "Rule.h"

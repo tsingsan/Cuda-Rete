@@ -10,3 +10,8 @@
 *.lai
 *.la
 *.a
+*.suo
+Release
+Debug
+*.ncb
+*.pdb

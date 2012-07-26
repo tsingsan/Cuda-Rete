@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<rdf:RDF>
+    <rdf:Description rdf:about="http://www.tsingsan.com#A">
+        <http://www.tsingsan.com#Grandson rdf:resource="http://www.tsingsan.com#C" />
+        <http://www.tsingsan.com#Granddaughter rdf:resource="http://www.tsingsan.com#D" />
+    </rdf:Description>
+</rdf:RDF>

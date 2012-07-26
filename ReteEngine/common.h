@@ -91,8 +91,6 @@ __device__ __host__ int StringLength(LPCTSTR p);
 //GPU使用内存池
 #define __ENABLE_DEVICE_POOL__
 
-#define __SUPPORT_UVA__
-
 //启用GPU DEBUG
 //#define __ENABLE_GPU_DEBUG__
 
