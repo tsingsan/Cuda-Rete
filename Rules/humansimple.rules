@@ -1,0 +1,16 @@
+# Example rule file
+@prefix Human: <http://www.tsingsan.com#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> 
+
+[Grandson:
+		(?d1 Human:Son  ?d2),
+		(?d2 Human:Son  ?d3),,
+	->
+		(?d1 Human:Grandson  ?d3),
+] 
+[Granddaughter:
+		(?d1 Human:Son  ?d2),
+		(?d2 Human:Daughter  ?d3),,
+	->
+		(?d1 Human:Granddaughter  ?d3),
+]  
